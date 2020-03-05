@@ -12,7 +12,7 @@ const createWindow = () => {
   const mainWindow = new BrowserWindow({
     backgroundColor: "#000000",
     width: 1024,
-    height: 900,
+    height: 768,
     webPreferences: {
       nodeIntegration: true
     }

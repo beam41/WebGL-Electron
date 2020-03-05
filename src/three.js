@@ -8,12 +8,9 @@ init();
 animate();
 
 function init() {
-  camera = new THREE.PerspectiveCamera(
-    70,
-    window.innerWidth / window.innerHeight,
-    0.01,
-    10
-  );
+  let w = 500;
+  let h = 500;
+  camera = new THREE.PerspectiveCamera(70, w / h, 0.01, 10);
   camera.position.z = 1;
 
   scene = new THREE.Scene();
@@ -25,7 +22,7 @@ function init() {
   scene.add(mesh);
 
   renderer = new THREE.WebGLRenderer({ antialias: true });
-  renderer.setSize(800, 600);
+  renderer.setSize(w, h);
   glcanvas.appendChild(renderer.domElement);
 }
 
