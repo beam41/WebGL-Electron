@@ -1,7 +1,7 @@
 {
   "name": "webgl-electron",
   "productName": "webgl-electron",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "My Electron application description",
   "main": "src/index.js",
   "scripts": {
@@ -20,11 +20,10 @@
   "config": {
     "forge": {
       "packagerConfig": {},
-      "makers": [
-        {
-          "name": "@electron-forge/maker-squirrel",
+      "makers": [{
+          "name": "@electron-forge/maker-zip",
           "config": {
-            "name": "webgl_electron"
+            "name": "CubeGL"
           }
         },
         {
