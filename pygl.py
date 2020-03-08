@@ -11,6 +11,15 @@ cubeEdges = ((0, 1), (0, 3), (0, 4), (1, 2), (1, 7), (2, 5),
 cubeQuads = ((0, 3, 6, 4), (2, 5, 6, 3), (1, 2, 5, 7),
              (1, 0, 4, 7), (7, 4, 6, 5), (2, 3, 0, 1))
 
+colors = (
+    (1,0,0),
+    (0,1,0),
+    (0,0,1),
+    (0,1,1),
+    (1,0,1),
+    (1,1,0)
+    )
+
 
 def wireCube():
     glBegin(GL_LINES)
@@ -22,8 +31,9 @@ def wireCube():
 
 def solidCube():
     glBegin(GL_QUADS)
-    for cubeQuad in cubeQuads:
-        for cubeVertex in cubeQuad:
+    for cubeQuad in range(len(cubeQuads)):
+        for cubeVertex in cubeQuads[cubeQuad]:
+            glColor3fv(colors[cubeQuad])
             glVertex3fv(cubeVertices[cubeVertex])
     glEnd()
 
